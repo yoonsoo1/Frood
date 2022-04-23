@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator} from 'react-navigation-stack';
 import Login from './Login.js';
 import SignUp from './SignUp';
 
 const MyStack = createStackNavigator(
     {
-      HomePage: { screen: Login },
-      ProfilePage: { screen: SignUp },
+      LoginPage: { screen: Login },
+      SignupPage: { screen: SignUp },
     },
     {
-      initialRouteName: 'Login',
+      initialRouteName: 'LoginPage',
     }
    );
 export default createAppContainer(MyStack);

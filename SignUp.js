@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import { View, Image, Text, Pressable, StyleSheet, TextInput } from 'react-native';
 
 export default class Login extends Component {
+    onSubmit = () => {
+
+    }
     static navigationOptions = {
         title: 'SignupPage',
         //Sets Header text of Status Bar
@@ -9,7 +12,7 @@ export default class Login extends Component {
     render() {
         const { navigate } = this.props.navigation;
         return (
-            <View>
+            <View style={styles.container}>
                 <Image 
                     source={require('./assets/frood_logo.png')}
                     style={{ marginLeft: "auto", marginRight: "auto", width: 250, height: 200 }}
@@ -56,6 +59,16 @@ const styles = StyleSheet.create({
         height: 25,
         width: 60,
         borderRadius: 15, 
-    }
+        position: 'absolute',
+        bottom: 40,
+        right: 180,
+    },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+    },
 });
 

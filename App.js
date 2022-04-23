@@ -6,9 +6,7 @@ import MyStack from './MyStack.js';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-        <MyStack></MyStack>
-    </View>
+    <MyStack/>
   );
 }
 

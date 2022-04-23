@@ -8,7 +8,7 @@ export default class Login extends Component {
     render() {
         const { navigate } = this.props.navigation;
         return (
-            <View>
+            <View style={styles.container}>
                 <Image 
                     source={require('./assets/frood_logo.png')}
                     style={{ marginLeft: "auto", marginRight: "auto", width: 250, height: 200 }}
@@ -26,16 +26,23 @@ export default class Login extends Component {
                 <Pressable style={styles.btn}>
                     <Text style={{textAlign:'center', lineHeight: 25}}>Sign in</Text>
                 </Pressable>
-                <Text style={{marginTop: 10}}>Don't have an account? Sign up <Pressable
-                onPress={() => navigate('SignUp')}>
+                <Text style={{marginTop: 50}}>Don't have an account? Sign up <Pressable
+                onPress={() => navigate('SignupPage')}>
                     <Text style={{color:"#3E8CE4", padding: 0, margin: 0}}>Here</Text></Pressable>
                 </Text>
             </View>
-          )
+        )
     }
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+      },
     input: {
         height: 40,
         margin: 12,
@@ -48,7 +55,9 @@ const styles = StyleSheet.create({
         display: "flex",
         flexDirection: "row",
         justifyContent: 'center',
-        alignSelf: 'flex-end',
+        bottom: 110,
+        right: 180,
+        position: 'absolute',
         margin: 10,
         backgroundColor: "#3E8CE4",
         height: 25,
