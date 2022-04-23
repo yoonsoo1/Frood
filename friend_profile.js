@@ -77,31 +77,31 @@ const toggleSwitch = () => setFollowing(previousState => !previousState);
             <View style={styles.entryContainer}>
                 <Image source={require('./assets/northern_logo.png')}
                 style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
-                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>Northern Cafe</Text>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, marginTop: 10}}>Northern Cafe{"\n"}Ham Fried Rice</Text>
             </View>
 
             <View style={styles.entryContainer}>
                 <Image source={require('./assets/innout_logo.png')}
                 style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
-                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>In-n-Out</Text>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, marginTop: 10}}>In-n-Out{"\n"}Double-Double Burger</Text>
             </View>
 
             <View style={styles.entryContainer}>
                 <Image source={require('./assets/cava.jpg')}
                 style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
-                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>Cava</Text>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, marginTop: 10}}>Cava{"\n"}Salad Bowl</Text>
             </View>
 
             <View style={styles.entryContainer}>
                 <Image source={require('./assets/thai_logo.png')}
                 style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
-                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>Thai By Trio</Text>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, marginTop: 10}}>Thai By Trio{"\n"}Pad Thai</Text>
             </View>
 
             <View style={styles.entryContainer}>
                 <Image source={require('./assets/tacobell_logo.png')}
                 style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
-                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>Taco Bell</Text>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, marginTop: 10}}>Taco Bell{"\n"}Beef Quesurrito</Text>
             </View>
 
         </ScrollView>
