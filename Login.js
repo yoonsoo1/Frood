@@ -2,11 +2,15 @@ import React, {Component} from 'react';
 import { View, Image, Text, Pressable, StyleSheet, TextInput } from 'react-native';
 
 export default class Login extends Component {
+    static navigationOptions = {
+        title: 'LoginPage',
+      };     
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <View>
                 <Image 
-                    source={require('./frood_logo.png')}
+                    source={require('./assets/frood_logo.png')}
                     style={{ marginLeft: "auto", marginRight: "auto", width: 250, height: 200 }}
                 />
                 <Text style={{marginLeft: 12}}>Email:</Text>
