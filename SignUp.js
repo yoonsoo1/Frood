@@ -2,11 +2,16 @@ import React, {Component} from 'react';
 import { View, Image, Text, Pressable, StyleSheet, TextInput } from 'react-native';
 
 export default class Login extends Component {
+    static navigationOptions = {
+        title: 'SignupPage',
+        //Sets Header text of Status Bar
+      };     
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <View>
                 <Image 
-                    source={require('./frood_logo.png')}
+                    source={require('./assets/frood_logo.png')}
                     style={{ marginLeft: "auto", marginRight: "auto", width: 250, height: 200 }}
                 />
                 <Text style={{marginLeft: 12}}>Display name:</Text>
@@ -24,7 +29,7 @@ export default class Login extends Component {
                     style={styles.input}
                     placeholder="Password"
                 />
-                <Pressable style={styles.btn}>
+                <Pressable style={styles.btn} onPress={() =>navigate('LoginPage')}>
                     <Text style={{textAlign:'center', lineHeight: 25}}>Sign up</Text>
                 </Pressable>
             </View>
