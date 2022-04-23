@@ -8,7 +8,7 @@ export default function EditProfile() {
         {/* Profile information */}
         <View style={styles.profileContainer}>
             <View style={styles.picContainer}>
-                <Image source={require('./profile_photo.jpeg')}
+                <Image source={require('./assets/profile_photo.jpeg')}
                 style={{width: 100, height: 100, borderRadius: 50}}></Image>
             </View>
             <View style={styles.infoContainer}>
@@ -35,19 +35,19 @@ export default function EditProfile() {
         </View>
 
         <View style={styles.topEntryContainer}>
-            <Image source={require('./dulce_logo.png')}
+            <Image source={require('./assets/dulce_logo.png')}
             style={{width: 60, height: 60, marginTop: 20, marginLeft: 20}}></Image>
             <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 100}}>Dulce</Text>
         </View>
 
         <View style={styles.entryContainer}>
-            <Image source={require('./northern_logo.png')}
+            <Image source={require('./assets/northern_logo.png')}
             style={{width: 70, height: 70, marginTop: 5, marginLeft: 10}}></Image>
             <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 80}}>Northern Cafe</Text>
         </View>
 
         <View style={styles.entryContainer}>
-            <Image source={require('./innout_logo.png')}
+            <Image source={require('./assets/innout_logo.png')}
             style={{width: 70, height: 70, marginTop: 5, marginLeft: 10}}></Image>
             <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 80}}>In-n-Out</Text>
         </View>

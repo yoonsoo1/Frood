@@ -8,7 +8,7 @@ export default function EditProfile() {
         {/* Profile information */}
         <View style={styles.profileContainer}>
             <View style={styles.picContainer}>
-                <Image source={require('./profile_photo.jpeg')}
+                <Image source={require('./assets/profile_photo.jpeg')}
                 style={{width: 100, height: 100, borderRadius: 50}}></Image>
             </View>
             <View style={styles.infoContainer}>
@@ -40,19 +40,19 @@ export default function EditProfile() {
         </View>
 
         <View style={styles.topEntryContainer}>
-            <Image source={require('./popeyes_logo.png')}
+            <Image source={require('./assets/popeyes_logo.png')}
             style={{width: 100, height: 100, paddingBottom: 10}}></Image>
             <Text style={styles.title}>Popeyes Louisiana Kitchen</Text>
         </View>
 
         <View style={styles.entryContainer}>
-            <Image source={require('./chc_logo.png')}
+            <Image source={require('./assets/chc_logo.png')}
             style={{width: 60, height: 60, marginTop: 10, marginLeft: 20}}></Image>
             <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 80}}>California Hot Chicken</Text>
         </View>
 
         <View style={styles.entryContainer}>
-            <Image source={require('./innout_logo.png')}
+            <Image source={require('./assets/innout_logo.png')}
             style={{width: 70, height: 70, marginTop: 5, marginLeft: 10}}></Image>
             <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 80}}>In-n-Out</Text>
         </View>
