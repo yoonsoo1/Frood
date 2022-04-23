@@ -3,10 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import Login from './Login.js';
 import SignUp from './SignUp'
 import MyStack from './MyStack.js';
+import EditProfile from './edit_profile.js';
 
 export default function App() {
   return (
-    <MyStack/>
+    <EditProfile/>
   );
 }
 
