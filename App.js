@@ -7,7 +7,12 @@ import EditProfile from './edit_profile.js';
 
 export default function App() {
   return (
-    <EditProfile/>
+    <View styles={styles.container}>
+        <SearchBar/>
+        <BlockCard/>
+        <FeaturedFood/>
+    </View>
+    // <EditProfile/>
   );
 }
 
