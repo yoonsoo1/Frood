@@ -4,9 +4,9 @@ import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 
 const Screen = ({children}) => {
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             {children}
-        </View>
+        </ScrollView>
     )
 }
 
