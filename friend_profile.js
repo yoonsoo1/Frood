@@ -1,8 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, StyleSheet, Text, View, Image } from 'react-native';
+import { Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View, Image } from 'react-native';
 import React, { useState } from 'react';
 
+const Following = () => {
+    return (
+        <View>
+        <Pressable style={styles.button} onPress ={toggleSwitch()}>
+            <Text style={styles.text}>Following</Text>
+        </Pressable>
+        </View>
+    )
+}
+
+const Follow = () => {
+    return (
+        <View>
+        <Pressable style={styles.button}>
+            <Text style={styles.text}>Follow</Text>
+        </Pressable>
+        </View>
+    )
+}
+
 export default function FriendProfile() {
+const [isFollowing, setFollowing] = useState(false);
+const toggleSwitch = () => setFollowing(previousState => !previousState);
+
   return (
     <View style={styles.mainContainer}>
         {/* Profile information */}
@@ -13,9 +36,18 @@ export default function FriendProfile() {
             </View>
             <View style={styles.infoContainer}>
                 <Text style={{fontSize:20, paddingBottom: 10}}>Scope Member</Text>
-                <Pressable style={styles.button}>
+                {isFollowing == true? 
+                <View>
+                <Pressable style={styles.followingbutton} onPress ={toggleSwitch}>
                     <Text style={styles.text}>Following</Text>
                 </Pressable>
+                </View>
+                :
+                <View>
+                    <Pressable style={styles.button} onPress ={toggleSwitch}>
+                        <Text style={styles.text}>Follow</Text>
+                    </Pressable>
+                </View>}
                 <Text style={{fontSize:12, paddingTop: 10}}>Followers 28 | Following 69</Text>
             </View>
         </View>
@@ -34,23 +66,46 @@ export default function FriendProfile() {
             </View>
         </View>
 
-        <View style={styles.topEntryContainer}>
-            <Image source={require('./assets/dulce_logo.png')}
-            style={{width: 60, height: 60, marginTop: 20, marginLeft: 20}}></Image>
-            <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 100}}>Dulce</Text>
-        </View>
+        <SafeAreaView>
+        <ScrollView style={styles.scrollview}>
+            <View style={styles.topEntryContainer}>
+                <Image source={require('./assets/dulce_logo.png')}
+                style={{width: 60, height: 60, marginLeft: 20}}></Image>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 80}}>Dulce</Text>
+            </View>
 
-        <View style={styles.entryContainer}>
-            <Image source={require('./assets/northern_logo.png')}
-            style={{width: 70, height: 70, marginTop: 5, marginLeft: 10}}></Image>
-            <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 80}}>Northern Cafe</Text>
-        </View>
+            <View style={styles.entryContainer}>
+                <Image source={require('./assets/northern_logo.png')}
+                style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>Northern Cafe</Text>
+            </View>
 
-        <View style={styles.entryContainer}>
-            <Image source={require('./assets/innout_logo.png')}
-            style={{width: 70, height: 70, marginTop: 5, marginLeft: 10}}></Image>
-            <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 80}}>In-n-Out</Text>
-        </View>
+            <View style={styles.entryContainer}>
+                <Image source={require('./assets/innout_logo.png')}
+                style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>In-n-Out</Text>
+            </View>
+
+            <View style={styles.entryContainer}>
+                <Image source={require('./assets/cava.jpg')}
+                style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>Cava</Text>
+            </View>
+
+            <View style={styles.entryContainer}>
+                <Image source={require('./assets/thai_logo.png')}
+                style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>Thai By Trio</Text>
+            </View>
+
+            <View style={styles.entryContainer}>
+                <Image source={require('./assets/tacobell_logo.png')}
+                style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
+                <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 50}}>Taco Bell</Text>
+            </View>
+
+        </ScrollView>
+        </SafeAreaView>
     </View>
   );
 }
@@ -60,7 +115,7 @@ const styles = StyleSheet.create({
         padding: 20,
         paddingTop: 0,
         flex: 1,
-        backgroundColor: '#F5F5F5'
+        backgroundColor: '#F5F5F5',
     },
     profileContainer: {
         flex: 0.2,
@@ -82,9 +137,11 @@ const styles = StyleSheet.create({
       flex: 0.1,
       width: 320,
       padding: 20,
+      marginTop: 60,
     },
     restaurantsContainer: {
         flexDirection: 'row',
+        marginTop: 20,
     },
     restaurantTab: {
         backgroundColor: '#3E8CE4',
@@ -120,6 +177,13 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
         fontSize: 16,
     },
+    followingbutton: {
+        height: 30,
+        width: 120,
+        borderRadius: 50,
+        fontSize: 16,
+        backgroundColor: '#3EE462',
+    },
     button: {
         height: 30,
         width: 120,
@@ -146,5 +210,9 @@ const styles = StyleSheet.create({
       fontSize: 16,
       fontWeight: 'bold',
       lineHeight: 100,
+    },
+    scrollview: {
+        // flex: 0.3,
+        height: 400,
     }
 });
