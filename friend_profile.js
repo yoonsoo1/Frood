@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Pressable, StyleSheet, Text, View, Image } from 'react-native';
 import React, { useState } from 'react';
 
-export default function EditProfile() {
+export default function FriendProfile() {
   return (
     <View style={styles.mainContainer}>
         {/* Profile information */}
