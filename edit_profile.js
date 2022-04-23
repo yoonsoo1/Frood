@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, StyleSheet, Text, View, Image } from 'react-native';
+import { SafeAreaView, ScrollView, Pressable, StyleSheet, Text, View, Image } from 'react-native';
 import React, { useState } from 'react';
 
 export default function EditProfile() {
@@ -39,23 +39,39 @@ export default function EditProfile() {
             </View>
         </View>
 
-        <View style={styles.topEntryContainer}>
-            <Image source={require('./assets/popeyes_logo.png')}
-            style={{width: 100, height: 100, paddingBottom: 10}}></Image>
-            <Text style={styles.title}>Popeyes Louisiana Kitchen</Text>
-        </View>
+        <SafeAreaView>
+            <ScrollView style={styles.scrollview}>
+                <View style={styles.topEntryContainer}>
+                    <Image source={require('./assets/popeyes_logo.png')}
+                    style={{width: 100, height: 100, marginTop: -10, marginBottom: 30}}></Image>
+                    <Text style={styles.title}>Popeyes Louisiana Kitchen{"\n"}Hot Chicken Sandwich</Text>
+                </View>
 
-        <View style={styles.entryContainer}>
-            <Image source={require('./assets/chc_logo.png')}
-            style={{width: 60, height: 60, marginTop: 10, marginLeft: 20}}></Image>
-            <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 80}}>California Hot Chicken</Text>
-        </View>
+                <View style={styles.entryContainer}>
+                    <Image source={require('./assets/chc_logo.png')}
+                    style={{width: 70, height: 70, marginTop: -5, marginLeft: 10}}></Image>
+                    <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, marginTop: 10}}>California Hot Chicken{"\n"}Cali Plate</Text>
+                </View>
 
-        <View style={styles.entryContainer}>
-            <Image source={require('./assets/innout_logo.png')}
-            style={{width: 70, height: 70, marginTop: 5, marginLeft: 10}}></Image>
-            <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, lineHeight: 80}}>In-n-Out</Text>
-        </View>
+                <View style={styles.entryContainer}>
+                    <Image source={require('./assets/innout_logo.png')}
+                    style={{width: 70, height: 70, marginTop: -5, marginLeft: 10}}></Image>
+                    <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, marginTop: 10}}>In-n-Out{"\n"}Double-Double Animal Style</Text>
+                </View>
+
+                <View style={styles.entryContainer}>
+                    <Image source={require('./assets/tacobell_logo.png')}
+                    style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
+                    <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, marginTop: 10}}>Taco Bell{"\n"}Crunchwrap Supreme</Text>
+                </View>
+
+                <View style={styles.entryContainer}>
+                    <Image source={require('./assets/thai_logo.png')}
+                    style={{width: 70, height: 70, marginTop: -10, marginLeft: 10}}></Image>
+                    <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16, marginTop: 10}}>Thai By Trio{"\n"}Pad Thai</Text>
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     </View>
   );
 }
@@ -87,9 +103,11 @@ const styles = StyleSheet.create({
       flex: 0.1,
       width: 320,
       padding: 20,
+      marginTop: 60,
     },
     restaurantsContainer: {
         flexDirection: 'row',
+        marginTop: 20,
     },
     restaurantTab: {
         backgroundColor: '#3E8CE4',
@@ -98,7 +116,7 @@ const styles = StyleSheet.create({
         marginRight: 20,
     },
     topEntryContainer: {
-        flex: 0.2,
+        flex: 0.5,
         flexDirection: 'row',
         borderBottomWidth: 2,
         borderTopWidth: 5,
@@ -109,7 +127,7 @@ const styles = StyleSheet.create({
         alignContent: 'center',
     },
     entryContainer: {
-        flex: 0.2,
+        flex: 0.4,
         flexDirection: 'row',
         borderBottomWidth: 2,
         borderBottomColor: '#3E8CE4',
@@ -160,6 +178,10 @@ const styles = StyleSheet.create({
     title: {
       fontSize: 16,
       fontWeight: 'bold',
-      lineHeight: 100,
+      marginTop: 20,
+    },
+    scrollview: {
+        // flex: 0.3,
+        height: 400,
     }
 });
